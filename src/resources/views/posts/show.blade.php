@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="mb-3">
+    <a href="{{ route('posts.index') }}" class="btn btn-outline-secondary btn-sm">← 一覧に戻る</a>
+</div>
+
 <div class="card mb-4">
     <div class="card-body">
         {{-- ヘッダー --}}
@@ -99,8 +103,4 @@
         コメントするには<a href="{{ route('login') }}">ログイン</a>が必要です。
     </p>
 @endauth
-
-<div class="mt-3">
-    <a href="{{ route('posts.index') }}" class="btn btn-outline-secondary btn-sm">← 一覧に戻る</a>
-</div>
 @endsection
