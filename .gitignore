@@ -1,0 +1,13 @@
+# Docker 環境変数（認証情報を含むため除外）
+.env
+
+# Laravel プロジェクト
+src/.env
+src/vendor/
+src/node_modules/
+src/storage/logs/*.log
+src/.phpunit.result.cache
+src/public/hot
+
+# macOS
+.DS_Store

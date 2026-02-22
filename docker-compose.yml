@@ -1,0 +1,40 @@
+services:
+  app:
+    build: ./docker/php
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - bulletin_net
+
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - app
+    networks:
+      - bulletin_net
+
+  db:
+    image: mysql:8.0
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - bulletin_net
+
+networks:
+  bulletin_net:
+    driver: bridge
+
+volumes:
+  db_data:
