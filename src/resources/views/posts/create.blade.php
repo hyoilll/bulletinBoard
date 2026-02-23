@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="card" style="max-width: 640px;">
+<div class="card" style="max-width: 100%;">
     <div class="card-body">
         <h1 class="h5 mb-4">新規投稿</h1>
 
