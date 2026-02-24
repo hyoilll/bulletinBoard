@@ -1,0 +1,152 @@
+/* ===========================
+   Custom Design — 掲示板
+   =========================== */
+
+:root {
+    --bs-primary:       #4f46e5;
+    --bs-primary-rgb:   79, 70, 229;
+    --bs-link-color:    #4f46e5;
+    --bs-link-hover-color: #4338ca;
+    --accent:           #4f46e5;
+    --accent-hover:     #4338ca;
+}
+
+/* ---------- Base ---------- */
+body {
+    font-family: 'Inter', 'Noto Sans JP', -apple-system, sans-serif;
+    background-color: #f4f4f8;
+    color: #1d1d1f;
+}
+
+/* ---------- Navbar ---------- */
+.app-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}
+.app-navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent) !important;
+    letter-spacing: -0.3px;
+}
+.app-navbar .nav-user {
+    font-size: .85rem;
+    color: #6b7280;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    letter-spacing: .01em;
+}
+.btn-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+.btn-outline-primary {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.btn-outline-primary:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ---------- Cards ---------- */
+.card {
+    border: 1px solid rgba(0, 0, 0, .07);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+    transition: box-shadow .18s ease, transform .18s ease;
+}
+.card-hoverable:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
+    transform: translateY(-1px);
+}
+
+/* ---------- Forms ---------- */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border-color: #d1d5db;
+    font-size: .93rem;
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, .18);
+}
+.form-label {
+    font-weight: 500;
+    font-size: .88rem;
+    color: #374151;
+    margin-bottom: .35rem;
+}
+
+/* ---------- Alerts ---------- */
+.alert {
+    border: none;
+    border-radius: 10px;
+    font-size: .9rem;
+}
+.alert-success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+.alert-danger {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+.alert-info {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+/* ---------- Badge ---------- */
+.badge.bg-secondary {
+    background-color: #e5e7eb !important;
+    color: #4b5563;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/* ---------- Pagination ---------- */
+.pagination .page-link {
+    border-radius: 8px !important;
+    margin: 0 2px;
+    color: var(--accent);
+    border-color: #e5e7eb;
+}
+.pagination .page-item.active .page-link {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* ---------- Guest layout ---------- */
+.guest-bg {
+    background: linear-gradient(140deg, #eef2ff 0%, #f4f4f8 60%);
+}
+.guest-card {
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 32px rgba(79, 70, 229, .1) !important;
+}
+.guest-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+    text-decoration: none;
+}
+
+/* ---------- Misc ---------- */
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+hr { border-color: #e5e7eb; }

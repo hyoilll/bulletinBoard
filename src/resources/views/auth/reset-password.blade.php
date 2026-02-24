@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <h5 class="mb-4">パスワードの再設定</h5>
+    <h5 class="fw-bold mb-4">パスワードの再設定</h5>
 
     <form method="POST" action="{{ route('password.store') }}">
         @csrf
@@ -26,7 +26,7 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        <div class="mb-4">
             <label for="password_confirmation" class="form-label">新しいパスワード（確認）</label>
             <input id="password_confirmation" type="password" name="password_confirmation"
                    class="form-control @error('password_confirmation') is-invalid @enderror"
@@ -36,8 +36,6 @@
             @enderror
         </div>
 
-        <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary">パスワードを再設定する</button>
-        </div>
+        <button type="submit" class="btn btn-primary w-100">パスワードを再設定する</button>
     </form>
 </x-guest-layout>

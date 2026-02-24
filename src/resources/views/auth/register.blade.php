@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <h5 class="mb-4">新規登録</h5>
+    <h5 class="fw-bold mb-4">新規登録</h5>
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
@@ -34,7 +34,7 @@
             @enderror
         </div>
 
-        <div class="mb-3">
+        <div class="mb-4">
             <label for="password_confirmation" class="form-label">パスワード（確認）</label>
             <input id="password_confirmation" type="password" name="password_confirmation"
                    class="form-control @error('password_confirmation') is-invalid @enderror"
@@ -44,9 +44,10 @@
             @enderror
         </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-            <a href="{{ route('login') }}" class="small">既にアカウントをお持ちの方</a>
-            <button type="submit" class="btn btn-primary">登録する</button>
-        </div>
+        <button type="submit" class="btn btn-primary w-100">登録する</button>
+
+        <p class="text-center small mt-3 mb-0">
+            すでにアカウントをお持ちの方は<a href="{{ route('login') }}">ログイン</a>
+        </p>
     </form>
 </x-guest-layout>

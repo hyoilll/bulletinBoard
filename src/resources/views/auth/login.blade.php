@@ -3,7 +3,7 @@
         <div class="alert alert-success mb-3">{{ session('status') }}</div>
     @endif
 
-    <h5 class="mb-4">ログイン</h5>
+    <h5 class="fw-bold mb-4">ログイン</h5>
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -28,21 +28,18 @@
             @enderror
         </div>
 
-        <div class="mb-3 form-check">
+        <div class="mb-4 form-check">
             <input id="remember_me" type="checkbox" name="remember" class="form-check-input">
-            <label for="remember_me" class="form-check-label">ログイン状態を保持する</label>
+            <label for="remember_me" class="form-check-label small">ログイン状態を保持する</label>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center">
+        <button type="submit" class="btn btn-primary w-100">ログイン</button>
+
+        <div class="d-flex justify-content-between align-items-center mt-3">
             @if (Route::has('password.request'))
                 <a href="{{ route('password.request') }}" class="small">パスワードをお忘れですか？</a>
             @endif
-            <button type="submit" class="btn btn-primary">ログイン</button>
+            <a href="{{ route('register') }}" class="small">新規登録はこちら</a>
         </div>
-
-        <hr>
-        <p class="text-center small mb-0">
-            アカウントをお持ちでない方は<a href="{{ route('register') }}">新規登録</a>
-        </p>
     </form>
 </x-guest-layout>
