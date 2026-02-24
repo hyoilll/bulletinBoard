@@ -15,7 +15,7 @@
     <div class="min-vh-100 d-flex align-items-center justify-content-center py-5">
         <div class="w-100" style="max-width: 420px;">
             <div class="text-center mb-4">
-                <img src="/img/logo.svg" width="52" height="52" alt="KJ" class="mb-2 d-block mx-auto">
+                <img src="/img/logo.svg" width="52" height="52" alt="Korea x Japan Talk ロゴ" class="mb-2 d-block mx-auto">
                 <a href="{{ route('posts.index') }}" class="guest-brand">Korea x Japan Talk</a>
             </div>
             <div class="card guest-card">

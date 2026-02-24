@@ -16,7 +16,7 @@
 <nav class="navbar navbar-expand-lg sticky-top app-navbar">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('posts.index') }}">
-            <img src="/img/logo.svg" width="28" height="28" alt="KJ">
+            <img src="/img/logo.svg" width="28" height="28" alt="Korea x Japan Talk ロゴ">
             Korea x Japan Talk
         </a>
         <div class="ms-auto d-flex align-items-center gap-2">
