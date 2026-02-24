@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', '掲示板') }}</title>
+    <title>{{ config('app.name', 'Korea x Japan Talk') }}</title>
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -14,7 +15,10 @@
 
 <nav class="navbar navbar-expand-lg sticky-top app-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('posts.index') }}">掲示板</a>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('posts.index') }}">
+            <img src="/img/logo.svg" width="28" height="28" alt="KJ">
+            Korea x Japan Talk
+        </a>
         <div class="ms-auto d-flex align-items-center gap-2">
             @auth
                 <span class="nav-user">{{ auth()->user()->name }}</span>
