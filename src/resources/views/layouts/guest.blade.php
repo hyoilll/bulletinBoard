@@ -6,15 +6,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', '掲示板') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-    <div class="min-vh-100 d-flex align-items-center justify-content-center">
+<body class="guest-bg">
+    <div class="min-vh-100 d-flex align-items-center justify-content-center py-5">
         <div class="w-100" style="max-width: 420px;">
             <div class="text-center mb-4">
-                <a href="{{ route('posts.index') }}" class="text-decoration-none fs-4 fw-bold">掲示板</a>
+                <a href="{{ route('posts.index') }}" class="guest-brand">掲示板</a>
             </div>
-            <div class="card shadow-sm">
-                <div class="card-body p-4">
+            <div class="card guest-card">
+                <div class="card-body p-4 p-md-5">
                     {{ $slot }}
                 </div>
             </div>
